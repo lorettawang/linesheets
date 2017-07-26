@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  before_action :set_cart, only [:create, :destroy]
+  before_action :set_cart, only: [:create, :destroy]
 
   def create
     @cart.add_product(params)
