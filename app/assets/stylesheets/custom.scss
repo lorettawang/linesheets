@@ -1,0 +1,72 @@
+* {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+}
+
+h1, body {
+  text-align: center;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.nav-wrapper {
+  text-align: right;
+}
+
+.intro, .footer, .actions {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.footer {
+  position: relative;
+  bottom: 0px;
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+}
+
+input {
+  height: auto !important;
+}
+
+.products-grid, table, th, td {
+  font-size: 14px;
+  margin: 0 auto;
+  border: 1px solid #CCCCCC;
+  text-align: center;
+}
+
+#notice {
+  color: #b0e2d2;
+  text-align: center;
+}
+
+.field_with_errors {
+  color: #b0e2d2;
+  display: inline;
+}
+
+.error_messages {
+  color: #b0e2d2;
+}
+
+.products-grid-div {
+  font-size: 14px;
+  max-width: 1200px;
+  display: flex;
+  // flex: 1;
+  // flex-basis: 20%;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
