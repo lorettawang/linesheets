@@ -1,19 +1,23 @@
 class Cart < ApplicationRecord
-    has_many :cart_items
+  belongs_to :cart_status
+  has_many :cart_items
+  before_create :set_order_status
+  before_save :update_subtotal
 
-    def add_product(product_params)
+  def update_subtotal
+  cart_items.collect { |ci| ci.valid? ? (ci.quantity * ci.unit_price_per_pack) : 0 }.sum
+end
 
-        current_item = cart_items.find_by(product_id: product_params[:product][:product_id])
+private
 
-        if current_item
-            current_item.quantity += product_params[:product][:quantity].to_i
-            current_item.save
-        else
-            new_item = cart_items.create(product_id: product_params [:product][:product_id],
-                quantity: product_params[:product][:quantity],
-                cart_id: self.id)
-        end
-            new_item
-        end
-    end
-        
+  def set_cart_status
+    self.cart_status_id = 1
+  end
+  
+  def update_subtotal
+    self[:subtotal] = subtotal
+  end
+  
+end
+
+

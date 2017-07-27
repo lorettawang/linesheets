@@ -1,0 +1,20 @@
+<div class=products-grid-div>
+  <% @products.each do |product| %>
+  <div class="products-header-div">
+    <div><%= image_tag product.image.url(:medium) %></div>
+    <div>Style Name: <%= product.style_name %></div>
+    <div>SKU: <%= product.sku %></div>
+    <div>Color: <%= product.color %></div>
+    <div>Price Per Unit: $<%= product.price_per_unit %></div>
+    <div>Price Per Pack: $<%= product.price_per_pack %></div><br>
+    <div class="actions"><%= link_to 'View', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure you want to delete this product?' } %></div>
+    <div class="actions"><%= submit_tag 'Add To Cart' %></div><br>
+  </div>
+  <% end %>
+  </div>
+</div>
+  <%= form_for cart_item, remote: true do |f| %>
+    Price Per Pack: <%= number_to_currency product.price_per_pack %>
+    <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+    <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+  <% end %>
