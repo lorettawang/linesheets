@@ -1,3 +1,4 @@
+<h2>My Cart</h2>
 <% if !@cart_item.nil? && @cart_item.errors.any? %>
   <div class="alert alert-danger">
     <ul>
@@ -8,6 +9,7 @@
   </div>
 <% end %>
 <% if @cart_items.size == 0 %>
+  <br>
   <p class="text-center">
     There are currently no items in your shopping cart.  Please <%= link_to "go back", products_path %> and add some items to your cart.
   </p>
