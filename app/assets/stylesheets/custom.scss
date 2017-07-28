@@ -106,3 +106,8 @@ input {
   float: left;
   margin: 0 auto;
 }
+
+.flex-view {
+  display: flex;
+  flex-wrap: wrap;
+}

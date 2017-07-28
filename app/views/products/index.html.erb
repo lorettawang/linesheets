@@ -1,5 +1,7 @@
+<div class="flex-view">
 <% @products.each do |product| %>
   <%= render "product_row", product: product, cart_item: @cart_item %>
 <% end %>
 <br>
 <%= link_to 'Create New Product', new_product_path %>
+</div>
