@@ -20,13 +20,16 @@
   <body>
     <div class="container">
       <div class="row">          
-        <h3><%= link_to "Linesheets", root_path %></h3>
+        <h2><%= link_to "Linesheets", root_path %></h2>
       <div class="nav-wrapper">
         <p>
             <% if current_user %>
               Welcome, <%= current_user.name %>
               &nbsp;&nbsp;|&nbsp;&nbsp;
               <%= link_to 'Log Out', session_path('dummy'), method: :delete %>
+              <br>
+              <br>
+              <%= link_to 'Create New Product', new_product_path %>
             <% else %>
               <%= link_to 'Log In', login_path %> |
               <%= link_to 'Sign Up', new_user_path %>
@@ -39,6 +42,8 @@
   <hr>
   <br>
   <br>
+  <%= yield %>
+    <hr>
     <div class="footer">
     <p>Created by <%= link_to 'Linesheets', about_path %></p>
     <p>Copyright © 2017 LNST, LLC. All Rights Reserved</p>

@@ -1,7 +1,7 @@
-class Cart < ApplicationRecord
+class Cart < ActiveRecord::Base
   belongs_to :cart_status
   has_many :cart_items
-  before_create :set_order_status
+  before_create :set_cart_status
   before_save :update_subtotal
 
   def update_subtotal

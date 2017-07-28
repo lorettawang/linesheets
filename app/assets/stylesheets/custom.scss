@@ -4,8 +4,12 @@
   color: #000000;
 }
 
-h1, body {
+h1, h2, body, a {
   text-align: center;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  color: #b0e2d2;
+
 }
 
 div {
@@ -14,8 +18,21 @@ div {
   }
 }
 
-.row {
+.form-container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.form-input {
+  text-align: left;
+  display: inline-block;
+}
+
+.field {
+  align-items: center;
   text-align: center;
+  width: 40%;
+  margin: 0 0 0 145px;
 }
 
 .nav-wrapper {
@@ -75,6 +92,9 @@ input {
   text-align: center;
 }
 
+.products-header-div {
+  
+}
 .well {
   float: left;
   margin: 0 auto;

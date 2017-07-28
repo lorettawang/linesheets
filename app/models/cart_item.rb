@@ -12,7 +12,7 @@ class CartItem < ActiveRecord::Base
     if persisted?
       self[:unit_price_per_pack]
     else
-      product.unit_price_per_pack
+      product.price_per_pack
     end
   end
   
@@ -24,7 +24,7 @@ private
 
   def product_present
     if product.nil?
-      errors.add(:product, "is not valid or is not available.")
+      errors.add(:product, "is not available for purchase.")
     end
   end
   

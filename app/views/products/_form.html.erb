@@ -11,36 +11,38 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :style_name %>
-    <%= form.text_field :style_name, id: :product_style_name %>
-  </div>
+<div class="form-container">
+  <div class="form-input">
+    <div class="field">
+      <%= form.label :style_name %>
+      <%= form.text_field :style_name, id: :product_style_name %>
+    </div>
 
-  <div class="field">
-    <%= form.label :sku %>
-    <%= form.text_field :sku, id: :product_sku %>
-  </div>
+    <div class="field">
+      <%= form.label :sku_number %>
+      <%= form.text_field :sku, id: :product_sku %>
+    </div>
 
-  <div class="field">
-    <%= form.label :color %>
-    <%= form.text_field :color, id: :product_color %>
-  </div>
+    <div class="field">
+      <%= form.label :color %>
+      <%= form.text_field :color, id: :product_color %>
+    </div>
 
-  <div class="field">
-    <%= form.label :price_per_unit %>
-    <%= form.text_field :price_per_unit, id: :product_price_per_unit %>
-  </div>
+    <div class="field">
+      <%= form.label :price_per_unit %>
+      <%= form.text_field :price_per_unit, id: :product_price_per_unit %>
+    </div>
 
-  <div class="field">
-    <%= form.label :price_per_pack %>
-    <%= form.text_field :price_per_pack, id: :product_price_per_pack %>
-  </div>
+    <div class="field">
+      <%= form.label :price_per_pack %>
+      <%= form.text_field :price_per_pack, id: :product_price_per_pack %>
+    </div>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :image %><br><br>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image, id: :image %>
+      <br><br>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
 <% end %>

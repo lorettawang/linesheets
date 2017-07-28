@@ -30,31 +30,5 @@
   <%= image_tag @product.image.url(:medium) %>
 </p>
 
-
-<table class="products-grid">
-  <thead>
-    <tr class="products-header">
-      <th>Style Name</th>
-      <th>SKU</th>
-      <th>Color</th>
-      <th>Price Per Unit</th>
-      <th>Price Per Pack</th>
-      <th>Image</th>
-    </tr>
-  </thead>
-
-  <tbody>
-      <tr class="products-info">
-        <td><%= @product.style_name %></td>
-        <td><%= @product.sku %></td>
-        <td><%= @product.color %></td>
-        <td>$<%= @product.price_per_unit %></td>
-        <td>$<%= @product.price_per_pack %></td>
-        <td><%= image_tag @product.image.url(:medium) %></td>
-      </tr>
-  </tbody>
-</table>
-
-
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
