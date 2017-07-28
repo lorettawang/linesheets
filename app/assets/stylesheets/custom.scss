@@ -88,19 +88,18 @@ input {
 }
 
 .products-grid-div {
-  font-size: 14px;
+  font-size: 13px;
   max-width: 1200px;
   display: flex;
-  // flex: 1;
-  // flex-basis: 20%;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 20px;
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  // float: left;
 }
 
 .products-header-div {
+  text-align: center;
 
 }
 .well {
